@@ -1,0 +1,23 @@
+{
+    "name": "pointybeard/primary-entry-field",
+    "version": "1.0.0",
+    "description": "Field for Symphony CMS. Checkbox that can only be on for a single entry at a time.",
+    "homepage": "https://github.com/pointybeard/primaryentryfield",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alannah Kearney",
+            "email": "hi@alannahkearney.com",
+            "homepage": "http://alannahkearney.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+      "issues": "https://github.com/pointybeard/primaryentryfield/issues",
+      "wiki": "https://github.com/pointybeard/primaryentryfield/wiki"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "pointybeard/symphony-pdo": "~0.1"
+    }
+}
