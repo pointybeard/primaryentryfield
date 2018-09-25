@@ -10,11 +10,11 @@ Checkbox that can only be "checked" for a single entry at a time. Will either to
 
 ## Installation and Setup
 
-1. Upload the 'primaryentryfield' folder to your Symphony 'extensions' folder or include it as a submodule (`git submodule add --name=extensions/primaryentryfield https://github.com/pointybeard/primaryentryfield.git`)
+1. Upload the 'primaryentryfield' folder to your Symphony 'extensions' folder or include it as a submodule in your install of Symphony (`git submodule add https://github.com/pointybeard/primaryentryfield.git extensions/primaryentryfiel`)
 
-2. Run `composer update` from within the 'primaryentryfield' extension folder to install required packages.
+2. Run `composer update` from within the 'primaryentryfield' extension folder to install required packages
 
-3. Install it by selecting "Primary Entry Field", choose Install from the `with-selected` menu, then click Apply.
+3. Install it by selecting "Primary Entry Field", choose Install from the `with-selected` menu, then click Apply
 
 
 ## Usage
