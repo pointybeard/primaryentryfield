@@ -3,7 +3,7 @@
 /**
  * @package toolkit
  */
-require "vendor/autoload.php";
+require_once(EXTENSIONS . "/primaryentryfield/extension.driver.php");
 require_once(TOOLKIT . '/fields/field.checkbox.php');
 
 /**
@@ -124,7 +124,7 @@ class FieldPrimaryEntry extends FieldCheckbox
                     : NULL
             ));
 
-            return ($result->fetchColumn() > 0);
+            return ($result === false ? false : $result->fetchColumn() > 0);
         }
 
         public static function toggleAllPrimaryFieldValuesToNo($fieldId) {
