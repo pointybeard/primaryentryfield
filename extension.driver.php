@@ -80,20 +80,20 @@ Class extension_primaryEntryField extends Extension{
     }
 
     public function uninstall(){
-        Symphony::Database()->query("DROP TABLE `tbl_fields_primaryentry`");
+        Symphony::Database()->query("DROP TABLE `tbl_fields_primaryentry`;");
     }
 
     public function install() {
-        return (bool)Symphony::Database()->query("
-            CREATE TABLE `tbl_fields_primaryentry` (
+        return (bool)Symphony::Database()->query(
+            "CREATE TABLE IF NOT EXISTS `tbl_fields_primaryentry` (
               `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
               `field_id` int(11) unsigned NOT NULL,
               `default_state` enum('on','off') NOT NULL DEFAULT 'off',
-              `auto_toggle` enum('yes','no') NOT NULL default 'yes',
+              `auto_toggle` enum('yes','no') NOT NULL DEFAULT 'yes',
               PRIMARY KEY (`id`),
               KEY `field_id` (`field_id`)
-            );
-        ");
+            ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;"
+        );
     }
 
 }
