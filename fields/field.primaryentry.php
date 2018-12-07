@@ -158,7 +158,7 @@ class FieldPrimaryEntry extends FieldCheckbox
     {
         $status = self::__OK__;
 
-        if($this->get('auto_toggle') == 'yes' && $this->doesDefaultEntryAlreadyExist($entry_id)){
+        if($this->get('auto_toggle') == 'yes' && $this->doesDefaultEntryAlreadyExist($this->get('id'), $entry_id)){
             self::toggleAllPrimaryFieldValuesToNo($this->get('id'));
         }
 
